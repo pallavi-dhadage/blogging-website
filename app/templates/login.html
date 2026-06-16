@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Login - MyBlog{% endblock %}
+{% block content %}
+    <div class="card" style="max-width: 400px; margin: 0 auto;">
+        <h1>🔐 Login</h1>
+        <form method="POST" action="/token">
+            <div style="margin-bottom: 15px;">
+                <label for="username" style="display: block; margin-bottom: 5px; font-weight: bold;">Username</label>
+                <input type="text" id="username" name="username" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="password" style="display: block; margin-bottom: 5px; font-weight: bold;">Password</label>
+                <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Login</button>
+        </form>
+        <p style="margin-top: 15px; text-align: center;">Don't have an account? <a href="/register">Register</a></p>
+    </div>
+{% endblock %}

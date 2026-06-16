@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} - MyBlog{% endblock %}
+{% block content %}
+    <div class="card">
+        <h1>{{ post.title }}</h1>
+        <p style="color: #7f8c8d; font-size: 0.9em;">By User {{ post.author_id }} • {{ post.created_at.strftime('%B %d, %Y') }}</p>
+        <div style="margin: 20px 0; line-height: 1.8;">
+            {{ post.content_html|safe }}
+        </div>
+        <a href="/" class="btn">← Back to Home</a>
+    </div>
+{% endblock %}

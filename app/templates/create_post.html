@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Create Post - MyBlog{% endblock %}
+{% block content %}
+    <div class="card">
+        <h1>✍️ Create New Post</h1>
+        <form method="POST" action="/posts/new">
+            <div style="margin-bottom: 15px;">
+                <label for="title" style="display: block; margin-bottom: 5px; font-weight: bold;">Title</label>
+                <input type="text" id="title" name="title" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="content" style="display: block; margin-bottom: 5px; font-weight: bold;">Content (Markdown supported)</label>
+                <textarea id="content" name="content" rows="10" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; font-family: monospace;"></textarea>
+            </div>
+            <button type="submit" class="btn">Publish Post</button>
+            <a href="/" style="margin-left: 15px; color: #7f8c8d; text-decoration: none;">Cancel</a>
+        </form>
+    </div>
+{% endblock %}
